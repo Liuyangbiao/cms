@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+	
+	<!-- 指定getting JDBC -->
+	<classPathEntry location="/Users/Dio/Documents/workspace/mybatisGenerator/WebContent/WEB-INF/lib/mysql-connector-java-5.1.6-bin.jar" />
+	
+	
+	<context id="mybatisGenerator" >
+		
+		<commentGenerator>  
+			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->  
+			<property name="suppressAllComments" value="true" />  
+		</commentGenerator>
+		
+		<!-- 指定数据库链接 -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://118.144.78.147:3306/yunqitong_ps?useUnicode=true&amp;charaterEncoding=utf-8;" userId="root" password="linkdata" />
+		
+		
+		<!-- mybatis里专门用来处理NUMERIC和DECIMAL类型的策略 -->
+		<javaTypeResolver >  
+			<property name="forceBigDecimals" value="true" />  
+		</javaTypeResolver>
+		
+		<!-- model -->
+		<javaModelGenerator targetPackage="com.yunqitong.mapper" targetProject="mybatisGenerator" />
+		
+		
+		<!-- mybatis -->
+		<sqlMapGenerator targetPackage="com.yunqitong.mapper" targetProject="mybatisGenerator" />
+		
+		
+		<!-- mapper -->
+		<javaClientGenerator targetPackage="com.yunqitong.mapper" targetProject="mybatisGenerator" type="XMLMAPPER" />
+		
+		
+		<!-- 需要生成代码的表 -->
+		<table tableName="t_order_ali_record" domainObjectName="TOrderAliRecord"/>
+	</context>
+	
+</generatorConfiguration>

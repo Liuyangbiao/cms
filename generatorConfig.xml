@@ -14,7 +14,7 @@
 		</commentGenerator>
 		
 		<!-- 指定数据库链接 -->
-		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://118.144.78.147:3306/yunqitong_ps?useUnicode=true&amp;charaterEncoding=utf-8;" userId="root" password="linkdata" />
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/yilianxi?useUnicode=true&amp;charaterEncoding=utf-8;" userId="root" password="dio" />
 		
 		
 		<!-- mybatis里专门用来处理NUMERIC和DECIMAL类型的策略 -->
@@ -23,19 +23,19 @@
 		</javaTypeResolver>
 		
 		<!-- model -->
-		<javaModelGenerator targetPackage="com.yunqitong.mapper" targetProject="mybatisGenerator" />
+		<javaModelGenerator targetPackage="com.model.model" targetProject="mybatisGenerator" />
 		
 		
 		<!-- mybatis -->
-		<sqlMapGenerator targetPackage="com.yunqitong.mapper" targetProject="mybatisGenerator" />
+		<sqlMapGenerator targetPackage="com.model.mybatis" targetProject="mybatisGenerator" />
 		
 		
 		<!-- mapper -->
-		<javaClientGenerator targetPackage="com.yunqitong.mapper" targetProject="mybatisGenerator" type="XMLMAPPER" />
+		<javaClientGenerator targetPackage="com.model.mapper" targetProject="mybatisGenerator" type="XMLMAPPER" />
 		
 		
 		<!-- 需要生成代码的表 -->
-		<table tableName="t_order_ali_record" domainObjectName="TOrderAliRecord"/>
+		<table tableName="iosadbaseinfo" domainObjectName="Iosadbaseinfo"/>
 	</context>
 	
 </generatorConfiguration>
